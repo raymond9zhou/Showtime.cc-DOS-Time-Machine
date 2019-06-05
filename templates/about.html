@@ -4,26 +4,16 @@
 {% block title %}关于{% endblock %}
 {% block main %}
     <div class="container mt-3">
-        <h2>中文 DOS 游戏 🎮</h2>
+        <h2>DOS时光机-Showtime</h2>
+        <h5>Modified By <a href="https://ray8.cc" target="_blank">Raymond Zhou</a></h5>
+<br />
         <h3>项目地址</h3>
-        <p><a href="https://github.com/rwv/chinese-dos-games">https://github.com/rwv/chinese-dos-games</a></p>
-
-        <h3>游戏列表</h3>
-        <p>
-            {% if games %}
-                <ul>
-                    {% for key, game_info in games.items() %}
-                        <li>
-                            <a href="{{ url_for('game', identifier=game_info['identifier']) }}">{{ game_info['name']['zh-Hans'] }}</a>
-                        </li>
-                    {% endfor %}
-                </ul>
-            {% endif %}
-        </p>
+        <p><a href="https://github.com/raymond9zhou/Showtime.cc-DOS-Time-Machine" target="_blank">https://github.com/raymond9zhou/Showtime.cc-DOS-Time-Machine</a></p>
 
         <h3>感谢</h3>
         <p>
         <ul>
+            <li><a href="#" target="_blank">紫菜 From SUFE</a></li>
             <li><a href="https://github.com/dreamlayers/em-dosbox" target="_blank">dreamlayers/em-dosbox: An Emscripten
                 port of DOSBox</a></li>
             <li><a href="https://github.com/db48x/emularity" target="_blank">db48x/emularity: easily embed emulators</a></li>

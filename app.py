@@ -4,7 +4,7 @@ from flask import render_template, redirect, url_for, make_response, request
 from game_infos import game_infos, game_infos_with_cover
 import json
 
-number_to_show_on_index = 42
+number_to_show_on_index = 20
 
 app = Flask(__name__)
 
@@ -47,6 +47,10 @@ def game(identifier):
 def emularity_logo(identifier):
     return redirect(url_for('static', filename='emularity/emularity_color_small.png'), code=301)
 
+@app.errorhandler(404)
+def miss(e):
+    return render_template('error.html'), 404
+
 
 if __name__ == '__main__':
-    app.run(debug=True)
+    app.run(host='0.0.0.0')
